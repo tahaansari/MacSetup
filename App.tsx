@@ -5,20 +5,27 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from './components/Header';
 
+// import { uuid } from 'uuidv4';
+
 import {
-  Text,
   View,
-  StyleSheet
+  StyleSheet,
+  FlatList,
+  Text
 } from 'react-native';
 
 function App(): React.JSX.Element {
+
+  const [users,setUsers] = useState([{id:1 ,name:"Taha"},{id:2,name:"Adil"},{id:3,name:"Bilal"}])
+
   return (
         <View style={styles.wrapper}>
             <Header title="Shopping List"/>
+            {/* <FlatList data={users} renderItem={({item})=> <Text>{item.id}</Text>}/> */}
         </View>
   );
 }
