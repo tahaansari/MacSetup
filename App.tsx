@@ -12,13 +12,16 @@ import Header from './components/Header';
 import ListItems from './components/ListItems';
 
 
+
+
 import {View, StyleSheet, FlatList, Text} from 'react-native';
 
 function App(): React.JSX.Element {
   const [users, setUsers] = useState([
-    {id: 1, name: 'Taha'},
-    {id: 2, name: 'Adil'},
-    {id: 3, name: 'Bilal'},
+    {id: 1, name: 'Milk'},
+    {id: 2, name: 'Egg'},
+    {id: 3, name: 'Bread'},
+    {id: 4, name: 'Juice'},
   ]);
 
   return (
