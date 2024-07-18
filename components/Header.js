@@ -8,10 +8,6 @@ const Header = ({ title }) => {
   );
 };
 
-Header.defaultProps = {
-  title: "This is the default prop",
-};
-
 const style = StyleSheet.create({
   header: {
     backgroundColor: "black",

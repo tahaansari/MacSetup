@@ -11,9 +11,6 @@ import React, {useState} from 'react';
 import Header from './components/Header';
 import ListItems from './components/ListItems';
 
-
-
-
 import {View, StyleSheet, FlatList, Text} from 'react-native';
 
 function App(): React.JSX.Element {
@@ -24,10 +21,17 @@ function App(): React.JSX.Element {
     {id: 4, name: 'Juice'},
   ]);
 
+
+  const deleteItem = (id)=>{
+    console.log(`deleted item called id is ${id}`)
+  }
+
+
+
   return (
     <View style={styles.wrapper}>
       <Header title="Shopping List" />
-      <FlatList data={users} renderItem={({item}) => <ListItems item={item}/>} />
+      <FlatList data={users} renderItem={({item}) => <ListItems item={item} deleteItem={deleteItem}/>} />
     </View>
   );
 }
